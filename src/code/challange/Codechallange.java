@@ -10,11 +10,22 @@ public class Codechallange {
 		BufferedReader b = new BufferedReader(f);
 		Scanner s = new Scanner(System.in);
 
+		// ReverseString(s);
 		// SumUpToGivenNumber(s);
 		// SumOfNumbers(s);
 		// PalindromeNumber(s);
 		// ReverseNumber(s);
 		// PowerOfNumber(s);
+	}
+
+	private static void ReverseString(Scanner s) {
+		String str = s.nextLine();
+		int strl = str.length();
+		String rev = "";
+		for (int i = strl - 1; i >= 0; i--) {
+			rev = rev + str.charAt(i);
+		}
+		System.out.println(rev);
 	}
 
 	private static void SumUpToGivenNumber(Scanner s) {
