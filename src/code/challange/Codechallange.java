@@ -9,13 +9,41 @@ public class Codechallange {
 		InputStreamReader f = new InputStreamReader(System.in);
 		BufferedReader b = new BufferedReader(f);
 		Scanner s = new Scanner(System.in);
+		System.out.println("Input arraylenght and digits to ReverseDigitsInArray");
+		ReverseDigitsInArray(s);
+//		System.out.println("input String to ReverseString");
+//		 ReverseString(s);
+//		 System.out.println("input a number to SumUpToGivenNumber");
+//		 SumUpToGivenNumber(s);
+//		 System.out.println("input a numbers to SumOfNumbers");
+//		 SumOfNumbers(s);
+//		 System.out.println("input palindraom number PalindromeNumber");
+//		 PalindromeNumber(s);
+//		 System.out.println("input digits to reverse ReverseNumbers");
+//		 ReverseNumbers(s);
+//		 System.out.println("input base and exp to  PowerOfNumber");
+//		 PowerOfNumber(s);
+	}
 
-		// ReverseString(s);
-		// SumUpToGivenNumber(s);
-		// SumOfNumbers(s);
-		// PalindromeNumber(s);
-		// ReverseNumber(s);
-		// PowerOfNumber(s);
+	private static void ReverseDigitsInArray(Scanner s) {
+		int alen = s.nextInt();
+		int[] arr = new int[alen];
+		for (int i = 0; i < alen; i++) {
+			arr[i] = s.nextInt();
+		}
+		// reverse the array
+		int j = alen - 1; // pointing to last element in array
+		// loop till half of input array
+		for (int i = 0; i < alen / 2; i++) {
+
+			int temp = arr[i];
+			arr[i] = arr[j - i];
+			arr[j - i] = temp;
+		}
+		for (int i = 0; i < alen; i++) {
+			System.out.print(arr[i]);
+		}
+
 	}
 
 	private static void ReverseString(Scanner s) {
@@ -67,7 +95,7 @@ public class Codechallange {
 	}
 
 //reverser nubmer
-	public static void ReverseNumber(Scanner s) {
+	public static void ReverseNumbers(Scanner s) {
 
 		// reverser nubmer
 		int n = s.nextInt();
