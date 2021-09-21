@@ -18,7 +18,6 @@ public class Codechallange {
 	}
 
 	private static void SumUpToGivenNumber(Scanner s) {
-		// TODO Auto-generated method stub
 
 	}
 
