@@ -10,7 +10,7 @@ public class Codechallange {
 		BufferedReader b = new BufferedReader(f);
 		Scanner s = new Scanner(System.in);
 
-		// SumUpToGivenNumber(s);
+		SumUpToGivenNumber(s);
 		// SumOfNumbers(s);
 		// PalindromeNumber(s);
 		// ReverseNumber(s);
