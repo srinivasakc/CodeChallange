@@ -10,7 +10,7 @@ public class Codechallange {
 		BufferedReader b = new BufferedReader(f);
 		Scanner s = new Scanner(System.in);
 
-		SumUpToGivenNumber(s);
+		// SumUpToGivenNumber(s);
 		// SumOfNumbers(s);
 		// PalindromeNumber(s);
 		// ReverseNumber(s);
@@ -18,8 +18,14 @@ public class Codechallange {
 	}
 
 	private static void SumUpToGivenNumber(Scanner s) {
-		// TODO Auto-generated method stub
-
+		int n = s.nextInt();
+		int sum = 0;
+		int k = 1;
+		while (k <= n) {
+			sum = sum + k;
+			k++;
+		}
+		System.out.println(sum);
 	}
 
 	private static void SumOfNumbers(Scanner s) {
