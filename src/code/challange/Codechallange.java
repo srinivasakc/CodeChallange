@@ -12,6 +12,8 @@ public class Codechallange {
 		BufferedReader b = new BufferedReader(f);
 		Scanner s = new Scanner(System.in);
 
+		Fibonacci(s);
+
 		MinInArray(s);
 		// System.out.println("6. Max/min number from an array");
 		MaxInArray(s);
@@ -36,6 +38,23 @@ public class Codechallange {
 //		 ReverseNumbers(s);
 //		 System.out.println("input base and exp to  PowerOfNumber");
 //		 PowerOfNumber(s);
+	}
+
+	private static void Fibonacci(Scanner s) {
+		int n = s.nextInt(); // 0112358
+		int first = 0;
+		int second = 1;
+		int sum = 0;
+		int k = 0;
+		while (k <= n) {
+			sum = first + second;
+			System.out.println(first + " ");
+			sum = first + second;
+			first = second;
+			second = sum;
+			k++;
+		}
+
 	}
 
 	public int SecMax_In_NumberArray(Scanner s) {
