@@ -1,5 +1,6 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 import java.util.TreeSet;
 
@@ -41,6 +42,7 @@ public class Unique_TripletThatSumTo_A_GivenValue {
 						triplets.add(nums[i]);
 						triplets.add(nums[j]);
 						triplets.add(nums[k]);
+						Collections.sort(triplets);
 						pair.add(triplets);
 						triplets = new ArrayList<>();
 						set.add(str);
@@ -52,10 +54,14 @@ public class Unique_TripletThatSumTo_A_GivenValue {
 					// decrement the third value index
 					k--;
 				} else if (nums[i] + nums[j] + nums[k] < sum)
+					// increment the second value index
+
 					j++;
 
-				else
+				else {
+					// decrement the third value index
 					k--;
+				}
 			}
 		}
 		return pair;
@@ -63,7 +69,8 @@ public class Unique_TripletThatSumTo_A_GivenValue {
 
 	// Driver code
 	public static void main(String[] args) {
-		int[] nums = { 12, 3, 6, 1, 6, 9 };
+		int[] nums = { 6, 8, 3, 2, 1, 12, 11, 6, 5, 6, 7, 9, 10, 4, 6, 8, 3, 2, 1, 12, 11, 6, 1, 6, 9, 12, 3, 6, 1, 6,
+				9, 12, 3, 6, 1, 6, 9 };
 		int sum = 24;
 
 		List<List<Integer>> triplets = findTriplets(nums, sum);

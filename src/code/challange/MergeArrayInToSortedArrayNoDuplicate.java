@@ -1,10 +1,10 @@
 package code.challange;
 
 import java.util.Arrays;
-import java.util.HashSet;
 import java.util.Iterator;
 import java.util.Scanner;
 import java.util.Set;
+import java.util.TreeSet;
 
 public class MergeArrayInToSortedArrayNoDuplicate {
 
@@ -54,7 +54,7 @@ public class MergeArrayInToSortedArrayNoDuplicate {
 		}
 
 		// remove duplicated from array
-		Set<Integer> seWithNoDuplicate = new HashSet<Integer>();
+		Set<Integer> seWithNoDuplicate = new TreeSet<Integer>();
 		for (int ac : c) {
 			seWithNoDuplicate.add(ac);
 		}
@@ -69,7 +69,7 @@ public class MergeArrayInToSortedArrayNoDuplicate {
 			n++;
 
 		}
-		Arrays.sort(mergeWithoutDuplicate);
+		// Arrays.sort(mergeWithoutDuplicate);
 		System.out.println("Array 1: " + Arrays.toString(a));
 		System.out.println("Array 2: " + Arrays.toString(b));
 		return mergeWithoutDuplicate;

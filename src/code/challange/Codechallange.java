@@ -17,27 +17,27 @@ public class Codechallange {
 		MinInArray(s);
 		// System.out.println("6. Max/min number from an array");
 		MaxInArray(s);
-//		System.out.println("4. String palindrome. A palindrome " + "is a word, phrase, number,"
-//				+ " or sequence of words that" + " reads the same backward as forward.");
-//		System.out.println(StringPalindrome(s));
+		System.out.println("4. String palindrome. A palindrome " + "is a word, phrase, number,"
+				+ " or sequence of words that" + " reads the same backward as forward.");
+		System.out.println(StringPalindrome(s));
 
-//		System.out.println("3. Reverse words. Write a method that" + " will take a string as an argument. "
-//				+ "The method will reverse the position" + " of words and return it.");
-//		ReverseWords(b);
-//		System.out.println("Input arraylenght and digits to ReverseDigitsInArray");
-//		ReverseDigitsInArray(s);
-//		System.out.println("input String to ReverseString");
-//		 ReverseString(s);
-//		 System.out.println("input a number to SumUpToGivenNumber");
-//		 SumUpToGivenNumber(s);
-//		 System.out.println("input a numbers to SumOfNumbers");
-//		 SumOfNumbers(s);
-//		 System.out.println("input palindraom number PalindromeNumber");
-//		 NumberPalindrome(s);
-//		 System.out.println("input digits to reverse ReverseNumbers");
-//		 ReverseNumbers(s);
-//		 System.out.println("input base and exp to  PowerOfNumber");
-//		 PowerOfNumber(s);
+		System.out.println("3. Reverse words. Write a method that" + " will take a string as an argument. "
+				+ "The method will reverse the position" + " of words and return it.");
+		ReverseWords(b);
+		System.out.println("Input arraylenght and digits to ReverseDigitsInArray");
+		ReverseDigitsInArray(s);
+		System.out.println("input String to ReverseString");
+		ReverseString(s);
+		System.out.println("input a number to SumUpToGivenNumber");
+		SumUpToGivenNumber(s);
+		System.out.println("input a numbers to SumOfNumbers");
+		SumOfNumbers(s);
+		System.out.println("input palindraom number PalindromeNumber");
+		NumberPalindrome(s);
+		System.out.println("input digits to reverse ReverseNumbers");
+		ReverseNumbers(s);
+		System.out.println("input base and exp to  PowerOfNumber");
+		PowerOfNumber(s);
 	}
 
 	private static void Fibonacci(Scanner s) {
@@ -144,7 +144,7 @@ public class Codechallange {
 		String strWords = b.readLine();
 		String[] aWords = strWords.split(" ");
 		String reversedWord = "";
-		StringBuilder reversedWords = new StringBuilder();
+		// StringBuilder reversedWords = new StringBuilder();
 		for (int i = aWords.length - 1; i >= 0; i--) {
 			reversedWord = reversedWord + " " + aWords[i];
 		}

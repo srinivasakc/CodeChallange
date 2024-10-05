@@ -1,0 +1,135 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x0000000105b32962, pid=2888, tid=43267
+#
+# JRE version: OpenJDK Runtime Environment (14.0.2+12) (build 14.0.2+12-46)
+# Java VM: OpenJDK 64-Bit Server VM (14.0.2+12-46, mixed mode, tiered, compressed oops, g1 gc, bsd-amd64)
+# Problematic frame:
+# C  [libjimage.dylib+0x1962]  _ZN12ImageStrings4findEP6EndianPKcPij+0x56
+#
+# No core dump will be written. Core dumps have been disabled. To enable core dumping, try "ulimit -c unlimited" before starting Java again
+#
+# If you would like to submit a bug report, please visit:
+#   https://bugreport.java.com/bugreport/crash.jsp
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -XX:+ShowCodeDetailsInExceptionMessages -agentlib:jdwp=transport=dt_socket,suspend=y,address=localhost:51183 -javaagent:/Applications/Eclipse.app/Contents/Eclipse/configuration/org.eclipse.osgi/406/0/.cp/lib/javaagent-shaded.jar -Dfile.encoding=UTF-8 code.challange.l
+
+Host: MacBookPro14,2 x86_64 3100 MHz, 4 cores, 8G, Darwin 21.1.0
+Time: Thu Nov 18 20:54:40 2021 EST elapsed time: 88 seconds (0d 0h 1m 28s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007fdd0e03d000):  JavaThread "Signal Dispatcher" daemon [_thread_in_vm, id=43267, stack(0x000070000aaad000,0x000070000abad000)]
+
+Stack: [0x000070000aaad000,0x000070000abad000],  sp=0x000070000abab320,  free space=1016k
+Native frames: (J=compiled Java code, A=aot compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [libjimage.dylib+0x1962]  _ZN12ImageStrings4findEP6EndianPKcPij+0x56
+C  [libjimage.dylib+0x25c9]  _ZNK15ImageFileReader19find_location_indexEPKcPy+0x3f
+C  [libjimage.dylib+0x280a]  JIMAGE_FindResource+0xcf
+V  [libjvm.dylib+0x1cd8dd]  _ZN19ClassPathImageEntry22open_stream_for_loaderEPKcP15ClassLoaderDataP6Thread+0x49
+V  [libjvm.dylib+0x1cfa7f]  _ZN11ClassLoader10load_classEP6SymbolbP6Thread+0x147
+V  [libjvm.dylib+0x6b7082]  _ZN16SystemDictionary19load_instance_classEP6Symbol6HandleP6Thread+0x304
+V  [libjvm.dylib+0x6b600b]  _ZN16SystemDictionary30resolve_instance_class_or_nullEP6Symbol6HandleS2_P6Thread+0x559
+V  [libjvm.dylib+0x6b5703]  _ZN16SystemDictionary15resolve_or_failEP6Symbol6HandleS2_bP6Thread+0x1b
+V  [libjvm.dylib+0x20ada3]  _ZN12ConstantPool13klass_at_implERK18constantPoolHandleibP6Thread+0x169
+V  [libjvm.dylib+0x3eddd9]  _ZN12ConstantPool8klass_atEiP6Thread+0x4d
+V  [libjvm.dylib+0x344ac5]  _ZN18InterpreterRuntime4_newEP10JavaThreadP12ConstantPooli+0x29
+j  jdk.internal.misc.Signal.dispatch(I)V+25 java.base@14.0.2
+v  ~StubRoutines::call_stub
+V  [libjvm.dylib+0x34b706]  _ZN9JavaCalls11call_helperEP9JavaValueRK12methodHandleP17JavaCallArgumentsP6Thread+0x256
+V  [libjvm.dylib+0x34b069]  _ZN9JavaCalls11call_staticEP9JavaValueP5KlassP6SymbolS5_P17JavaCallArgumentsP6Thread+0xbb
+V  [libjvm.dylib+0x5e5ba5]  _ZL19signal_thread_entryP10JavaThreadP6Thread+0x30a
+V  [libjvm.dylib+0x6ed19a]  _ZN10JavaThread17thread_main_innerEv+0x86
+V  [libjvm.dylib+0x6ecfd8]  _ZN10JavaThread3runEv+0x118
+V  [libjvm.dylib+0x6eae17]  _ZN6Thread8call_runEv+0x71
+V  [libjvm.dylib+0x5e98ce]  _ZL19thread_native_entryP6Thread+0x129
+C  [libsystem_pthread.dylib+0x6514]  _pthread_start+0x7d
+C  [libsystem_pthread.dylib+0x202f]  thread_start+0xf
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  jdk.internal.misc.Signal.dispatch(I)V+25 java.base@14.0.2
+v  ~StubRoutines::call_stub
+
+siginfo: si_signo: 11 (SIGSEGV), si_code: 1 (SEGV_MAPERR), si_addr: 0x00000001075c8490
+
+Register to memory mapping:
+
+RAX=0x0000000105b34120: _ZTV12NativeEndian+0x10 in /Users/srini/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.macosx.x86_64_14.0.2.v20200815-0932/jre/lib/libjimage.dylib at 0x0000000105b31000
+RBX=0x000070000abab3e0 is pointing into the stack for thread: 0x00007fdd0e03d000
+RCX=0x0000000076100fa4 is an unknown value
+RDX=0x000000000000191d is an unknown value
+RSP=0x000070000abab320 is pointing into the stack for thread: 0x00007fdd0e03d000
+RBP=0x000070000abab330 is pointing into the stack for thread: 0x00007fdd0e03d000
+RSI=0x000070000abab403 is pointing into the stack for thread: 0x00007fdd0e03d000
+RDI=0x0000000105b342b8: _ZN12NativeEndian7_nativeE+0 in /Users/srini/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.macosx.x86_64_14.0.2.v20200815-0932/jre/lib/libjimage.dylib at 0x0000000105b31000
+R8 =0x00000001075c201c is an unknown value
+R9 =0x0000000106fc9d04: <offset 0x791d04> in /Users/srini/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.macosx.x86_64_14.0.2.v20200815-0932/jre/lib/server/libjvm.dylib at 0x0000000106838000
+R10=0x0 is NULL
+R11=0xfffff022fd4a3572 is an unknown value
+R12=0x00000001075c201c is an unknown value
+R13=0x00006000028b5d80 points into unknown readable memory: 80 5d 40 75 d5 d7 00 00
+R14=0x0000000000008446 is an unknown value
+R15=0x000070000abab3e0 is pointing into the stack for thread: 0x00007fdd0e03d000
+
+
+Registers:
+RAX=0x0000000105b34120, RBX=0x000070000abab3e0, RCX=0x0000000076100fa4, RDX=0x000000000000191d
+RSP=0x000070000abab320, RBP=0x000070000abab330, RSI=0x000070000abab403, RDI=0x0000000105b342b8
+R8 =0x00000001075c201c, R9 =0x0000000106fc9d04, R10=0x0000000000000000, R11=0xfffff022fd4a3572
+R12=0x00000001075c201c, R13=0x00006000028b5d80, R14=0x0000000000008446, R15=0x000070000abab3e0
+RIP=0x0000000105b32962, EFLAGS=0x0000000000010246, ERR=0x0000000000000004
+  TRAPNO=0x000000000000000e
+
+Top of Stack: (sp=0x000070000abab320)
+0x000070000abab320:   0000000105b342b8 000070000abac480
+0x000070000abab330:   000070000abab3b0 0000000105b335c9
+0x000070000abab340:   0000000000000000 0000000000000000
+0x000070000abab350:   0000000000000000 0000000000000000
+0x000070000abab360:   0000000000000000 0000000000000000
+0x000070000abab370:   0000000000000000 0000000000000000
+0x000070000abab380:   0000000000000000 0000000000000000
+0x000070000abab390:   00007fdd0d707e70 000000010701af4e
+0x000070000abab3a0:   0000000000000020 0000000000000002
+0x000070000abab3b0:   000070000abac410 0000000105b3380a
+0x000070000abab3c0:   0000000000000000 00006000028b5d80
+0x000070000abab3d0:   000070000abac480 0000000000000022
+0x000070000abab3e0:   6e692f6b646a2f2f 6d2f6c616e726574
+0x000070000abab3f0:   6e6769532f637369 616c632e31246c61
+0x000070000abab400:   0000000000007373 0000000000000000
+0x000070000abab410:   0000000000000000 0000000000000000
+0x000070000abab420:   0000000000000000 0000000000000000
+0x000070000abab430:   0000000000000000 0000000000000000
+0x000070000abab440:   0000000000000000 0000000000000000
+0x000070000abab450:   0000000000000000 0000000000000000
+0x000070000abab460:   0000000000000000 0000000000000000
+0x000070000abab470:   0000000000000000 0000000000000000
+0x000070000abab480:   0000000000000000 0000000000000000
+0x000070000abab490:   0000000000000000 0000000000000000
+0x000070000abab4a0:   0000000000000000 0000000000000000
+0x000070000abab4b0:   0000000000000000 0000000000000000
+0x000070000abab4c0:   0000000000000000 0000000000000000
+0x000070000abab4d0:   0000000000000000 0000000000000000
+0x000070000abab4e0:   0000000000000000 0000000000000000
+0x000070000abab4f0:   0000000000000000 0000000000000000
+0x000070000abab500:   0000000000000000 0000000000000000
+0x000070000abab510:   0000000000000000 0000000000000000 
+
+Instructions: (pc=0x0000000105b32962)
+0x0000000105b32862:   c0 78 26 c1 e0 18 41 0f b6 49 01 c1 e1 10 09 c1
+0x0000000105b32872:   41 0f b6 51 02 c1 e2 08 09 ca 41 0f b6 41 03 09
+0x0000000105b32882:   d0 41 b8 04 00 00 00 eb 4a 89 c6 40 c0 ee 05 40
+0x0000000105b32892:   80 e6 03 44 0f b6 c6 83 e0 1f 41 80 f8 01 74 33
+0x0000000105b328a2:   89 f1 c0 e1 03 0f b6 c9 83 c1 f8 d3 e0 40 84 f6
+0x0000000105b328b2:   74 21 42 8d 0c c5 f0 ff ff ff be 01 00 00 00 41
+0x0000000105b328c2:   0f b6 14 31 d3 e2 09 d0 48 ff c6 83 c1 f8 4c 39
+0x0000000105b328d2:   c6 72 ec 4d 01 c1 4c 89 0f 5d c3 90 90 90 55 48
+0x0000000105b328e2:   89 e5 8a 07 84 c0 74 17 48 ff c7 69 ce 93 01 00
+0x0000000105b328f2:   01 0f b6 f0 31 ce 8a 07 48 ff c7 84 c0 75 ec 81
+0x0000000105b32902:   e6 ff ff ff 7f 89 f0 5d c3 90 55 48 89 e5 41 56
+0x0000000105b32912:   53 41 89 ce 49 89 d0 48 89 f3 b8 ff ff ff ff 4d
+0x0000000105b32922:   85 c0 74 74 45 85 f6 74 6f 8a 13 84 d2 74 24 48
+0x0000000105b32932:   8d 73 01 b8 93

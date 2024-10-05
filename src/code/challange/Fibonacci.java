@@ -5,7 +5,8 @@ public class Fibonacci {
 	public static void main(String[] args) {
 		// Fibonacci
 		// f(3)-- 011235813
-		System.out.print(fib(6));
+		System.out.print(fib(1000));
+		System.out.print(fibrec(fibrec(3)));
 	}
 
 	public static int fib(int n) {
@@ -15,7 +16,7 @@ public class Fibonacci {
 		int k = 0;
 		int fib = 0;
 		while (k < n) {
-			// System.out.print(fib + " ");
+			System.out.println(fib + " ");
 			fib = first + second;
 			first = second;
 			second = fib;
@@ -24,5 +25,11 @@ public class Fibonacci {
 
 		return fib;
 
+	}
+
+	static int fibrec(int n) {
+		if (n <= 1)
+			return n;
+		return fibrec(n - 1) + fib(n - 2);
 	}
 }

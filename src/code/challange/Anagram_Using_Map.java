@@ -1,55 +1,52 @@
 package code.challange;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.Scanner;
 
 public class Anagram_Using_Map {
+//Anagram String a=b and a contains all the craracters in string b
+	// e.g a= Mango b = ongnam
+	public static void main(String[] args) throws IOException {
 
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter string");
-		String a = sc.next();
-		System.out.println("Enter Aanagram");
-		String b = sc.next();
+		BufferedReader bf = new BufferedReader(new InputStreamReader(System.in));
+		System.out.println("Enter string a");
+		String a = bf.readLine();
+		System.out.println("Enter string b");
+		String b = bf.readLine();
 
 		System.out.println(isAnagram(a, b));
 
 	}
 
-	public static boolean isAnagram(String a, String b) {
-		Map<Character, Integer> mapA = new HashMap<Character, Integer>();
-		Map<Character, Integer> mapB = new HashMap<Character, Integer>();
-		char[] arr1 = a.toCharArray();
-		char[] arr2 = b.toCharArray();
-		// map A
-		for (char s0 : arr1) {
-			if (mapA.get(s0) == null) {
-				mapA.put(s0, 1);
-			} else {
-				Integer i = (int) mapA.get(s0);
-				mapA.put(s0, ++i);
-				// mapA.put(s, mapA.get(s) + 1);
+	private static boolean isAnagram(String a, String b) {
+		char[] c1 = a.toCharArray();
+		char[] c2 = b.toCharArray();
+		Map<Character, Integer> m1 = new HashMap<Character, Integer>();
+		Map<Character, Integer> m2 = new HashMap<Character, Integer>();
 
+		for (char c : c1) {
+			if (!m1.containsKey(c)) {
+				m1.put(c, 1);
+			} else {
+				m1.put(c, m1.get(c) + 1);
 			}
 		}
 
-		// map B
-		for (char s1 : arr2) {
-			if (mapB.get(s1) == null) {
-				mapB.put(s1, 1);
+		for (char d : c2) {
+			if (!m2.containsKey(d)) {
+				m2.put(d, 1);
 			} else {
-				Integer j = (int) mapB.get(s1);
-				mapB.put(s1, ++j);
-				// mapA.put(s, mapA.get(s) + 1);
-
+				m2.put(d, m2.get(d) + 1);
 			}
 		}
-
-		if (mapA.equals(mapB)) {
+		if (m1.equals(m2)) {/// ******
 			return true;
 		} else {
 			return false;
 		}
 	}
+
 }
