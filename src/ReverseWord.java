@@ -1,20 +1,37 @@
 
 public class ReverseWord {
-	// Complete the function
-	// str: input string
-	public static String reverseWord(String str) {
-		// Reverse the string str
-		int l = str.length();
-		String rev = "";
-		for (int i = l - 1; i >= 0; i--) {
-			rev = rev + str.charAt(i);
+	static char[] reverseString(char s[]) {
+		int start = 0;
+		for (int i = 0; i < s.length - 1; i++) {
+			if (s[i] == '.') {
+				reverseWords(s, start, i - 1);
+				start = i + 1;
+			}
 		}
-
-		return rev;
+		// reverse last word
+		reverseWords(s, start, s.length - 1);
+		// reverse entire string
+		reverseWords(s, 0, s.length - 1);
+		return s;
 	}
 
-	public static void main(String[] args) {
+	static char[] reverseWords(char[] s, int start, int end) {
+		char temp;
+		while (start <= end) {
+			temp = s[start];
+			s[start] = s[end];
+			s[end] = temp;
+			start++;
+			end--;
+		}
+		return s;
+	}
 
-		System.out.println(reverseWord("Geeksco"));
+// Driver Code
+	public static void main(String[] args) {
+		String s = "i.like.this.program.very.much";
+		char c[] = reverseString(s.toCharArray());
+		System.out.println(String.valueOf(c));
+
 	}
 }
