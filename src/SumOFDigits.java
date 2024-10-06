@@ -14,6 +14,7 @@ public class SumOFDigits {
 		}
 		while (N > 0) {
 			sum = sum + N % 10;
+			System.out.println(sum);
 			N = N / 10;
 		}
 		return sum;
