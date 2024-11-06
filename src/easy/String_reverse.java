@@ -1,6 +1,6 @@
 package easy;
 
-class Revese_String {
+class String_reverse {
 	public static void main(String[] args) {
 		System.out.println(revStringEfficentAlgorithm("elppa")); // apple
 		System.out.println(reverse_String("apple")); // elppa
