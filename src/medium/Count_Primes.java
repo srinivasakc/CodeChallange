@@ -15,7 +15,9 @@ public class Count_Primes {
 			return 0;
 		}
 		boolean[] isPrime = new boolean[n];
+
 		Arrays.fill(isPrime, true);
+
 		for (int i = 2; i < n; i++) {
 			if (isPrime[i]) {
 				for (int j = 2; j <= i / 2; j++) {
@@ -33,6 +35,7 @@ public class Count_Primes {
 				count++;
 			}
 		}
+
 		System.out.print("\n");
 		return count;
 	}
