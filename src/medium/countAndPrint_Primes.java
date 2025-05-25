@@ -2,7 +2,7 @@ package medium;
 
 import java.util.Arrays;
 
-public class Count_Primes {
+public class countAndPrint_Primes {
 
 	public static void main(String[] args) {
 		System.out.println(countAndPrintPrimes(10));
