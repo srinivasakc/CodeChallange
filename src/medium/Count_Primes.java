@@ -5,10 +5,12 @@ import java.util.Arrays;
 public class Count_Primes {
 
 	public static void main(String[] args) {
-		System.out.println(countPrimes(10));
+		System.out.println(countAndPrintPrimes(10));
 	}
 
-	public static int countPrimes(int n) {
+	// Given an integer n, return the number of prime numbers that are strictly less
+	// than n.
+	public static int countAndPrintPrimes(int n) {
 		int count = 0;
 
 		if (n < 2) {
