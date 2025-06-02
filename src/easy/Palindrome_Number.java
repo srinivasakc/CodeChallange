@@ -27,8 +27,8 @@ public class Palindrome_Number {
 	private static boolean isPalindrome(int num) {
 		// keep num in temp, initialise reverse and remainder to zero
 		int rev = 0, reminder = 0, temp = num;
-		// number less than zero or (num divided by 10 wil no remainder and not equal to
-		// zero)
+		// number less than zero or (num divided by 10 with no remainder and not equal
+		// to zero)
 		if (num < 0 || (num % 10 == 0 && num != 0)) {// num<0 and single digit like 1, 2,4,5....
 			return false;
 		}
