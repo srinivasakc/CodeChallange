@@ -7,20 +7,21 @@ import java.util.Collections;
 //if we have duplicate array can need to sorted to work
 public class Array_reverse {
 	public static void main(String[] args) {
-		int[] inputArray = new int[] { 3, 6, 9, 8, 10, 3 };
-		Arrays.sort(inputArray);
+		int[] inputArray = new int[] { 1, 4, 3, 2, 6, 5 };
+
 		System.out.println(Arrays.toString(reverseArray(inputArray)));
 //reverse the string using collections
-		rev(inputArray);
+
+		System.out.println(Arrays.toString(rev(inputArray)));
 	}
 
 	public static int[] reverseArray(int[] inputArray) {
 		int start = 0;
 		int end = inputArray.length - 1;
 		while (start < end) {
-			int temp = start;
-			start = inputArray[end];
-			end = temp;
+			int temp = inputArray[start];
+			inputArray[start] = inputArray[end];
+			inputArray[end] = temp;
 			start++;
 			end--;
 		}
@@ -28,9 +29,16 @@ public class Array_reverse {
 		return inputArray;
 	};
 
-	public static void rev(int[] inputArray) {
+	public static int[] rev(int[] inputArray) {
+
+		System.out.println("Original Array : " + Arrays.toString(inputArray));
+
 		Collections.reverse(Arrays.asList(inputArray));
-		System.out.println(Arrays.toString(reverseArray(inputArray)));
+
+		// Print and display reverse updated array
+		System.out.println("Modified Array : " + Arrays.toString(inputArray));
+		return inputArray;
+
 	}
 
 }
