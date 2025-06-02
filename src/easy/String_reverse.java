@@ -21,7 +21,7 @@ class String_reverse {
 			start++;
 			end--;
 		}
-		return new String(cArray);
+		return new String(cArray);// return converting c (character array to string) using new String(Array);
 	}
 
 	public static String reverse_String(String str) {
