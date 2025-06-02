@@ -1,6 +1,6 @@
 package easy;
 
-class Reverse_words {
+public class Reverse_words {
 
 	public static void main(String[] args) {
 		System.out.println(revWords("apple banana kiwi")); // kiwi banana apple
@@ -11,8 +11,7 @@ class Reverse_words {
 
 	public static String revWords(String str) {
 		StringBuilder revString = new StringBuilder();
-
-		String[] words = str.split("\\s+");
+		String[] words = str.split("\\s+"); // Split \\s+ will match any sequence of one or more whitespace
 		for (int i = words.length - 1; i >= 0; i--) {
 			revString.append(words[i]).append(" ");
 		}
