@@ -3,15 +3,9 @@ package easy;
 import java.util.Arrays;
 import java.util.Collections;
 
-//this will work for unsorted no duplicate array
-//if we have duplicate array can need to sorted to work
 public class Array_reverse {
 	public static void main(String[] args) {
 		int[] inputArray = new int[] { 1, 4, 3, 2, 6, 5 };
-
-//		System.out.println(Arrays.toString(reverseArray(inputArray)));
-//reverse the string using collections
-
 		System.out.println(Arrays.toString(rev(inputArray)));
 	}
 
@@ -35,7 +29,6 @@ public class Array_reverse {
 
 		Collections.reverse(Arrays.asList(inputArray));
 
-		// Print and display reverse updated array
 		System.out.println("Modified Array : " + Arrays.toString(inputArray));
 		return inputArray;
 
