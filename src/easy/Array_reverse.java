@@ -9,7 +9,7 @@ public class Array_reverse {
 	public static void main(String[] args) {
 		int[] inputArray = new int[] { 1, 4, 3, 2, 6, 5 };
 
-		System.out.println(Arrays.toString(reverseArray(inputArray)));
+//		System.out.println(Arrays.toString(reverseArray(inputArray)));
 //reverse the string using collections
 
 		System.out.println(Arrays.toString(rev(inputArray)));
