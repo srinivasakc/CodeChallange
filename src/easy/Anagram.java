@@ -6,7 +6,7 @@ public class Anagram {
 
 	public static void main(String[] args) {
 		String str1 = "listen";
-		String str2 = "Silent";
+		String str2 = "silent";
 
 		System.out.println(isAnagram(str1, str2));
 
