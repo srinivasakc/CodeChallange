@@ -32,3 +32,6 @@ public class Count_Vowels_Consonants {
 	}
 
 }
+//Explanation:
+// vowels.indexOf(ch) != -1: Checks if the character is a vowel.
+// Character.isLetter(ch): Ensures that only letters are counted as consonants.
