@@ -6,7 +6,7 @@ import java.util.Map;
 public class OccuranceOfEachCharacter {
 
 	public static void main(String[] args) {
-		String str = "Srinivasa";
+		String str = "auutomaiton";
 
 		HashMap<Character, Integer> map = new HashMap<>();
 		for (char c : str.toCharArray()) {
@@ -17,7 +17,7 @@ public class OccuranceOfEachCharacter {
 			}
 		}
 
-		for (Map.Entry entry : map.entrySet()) {
+		for (Map.Entry<Character, Integer> entry : map.entrySet()) {
 			System.out.println(entry.getKey() + "-" + entry.getValue());
 
 		}
