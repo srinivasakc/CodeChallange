@@ -3,7 +3,7 @@ package easy;
 import java.util.Arrays;
 import java.util.TreeSet;
 
-public class Second_Largest_Integer_In_Array {
+public class Second_MAX_Largest_Integer_In_Array {
 
 	public static void main(String[] args) {
 		int[] arr = new int[] { 2, 3, 5, 7, 23, 67, 54, 33 };
