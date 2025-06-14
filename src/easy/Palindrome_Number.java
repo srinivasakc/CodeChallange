@@ -33,7 +33,7 @@ public class Palindrome_Number {
 			return false;
 		}
 		// reverse the number
-		while (num > 0) {
+		while (num != 0) {
 			reminder = num % 10;
 			rev = rev * 10 + reminder;
 			num = num / 10;
