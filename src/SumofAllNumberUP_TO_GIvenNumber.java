@@ -10,6 +10,7 @@ public class SumofAllNumberUP_TO_GIvenNumber {
 	static int getTheSum(int n) {
 
 		if (n > 0) {
+
 			return n + getTheSum(n - 1);
 		} else {
 			return 0;

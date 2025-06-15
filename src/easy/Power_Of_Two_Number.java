@@ -7,6 +7,7 @@ public class Power_Of_Two_Number {
 		System.out.println(isPowerOfTwo(256));
 		System.out.println(isPowerOfTwo(65));
 		System.out.println(isPowerOfTwo(1));
+		System.out.println(isPowerOfTwo(8));
 
 	}
 

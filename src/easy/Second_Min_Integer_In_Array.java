@@ -9,19 +9,19 @@ public class Second_Min_Integer_In_Array {
 	public static void main(String[] args) {
 		int[] arr = new int[] { 2, 3, 5, 7, 23, 67, 54, 33 };
 
-		System.out.println(secondLargetIntegerInArray(arr));
-		System.out.println(secondLargetIntegerInArrayUsingSet(arr));
+		System.out.println(secondSmallestIntegerInArray(arr));
+		System.out.println(secondSmallestIntegerInArrayUsingSet(arr));
 
 	}
 
-	private static int secondLargetIntegerInArray(int[] arr) {
+	private static int secondSmallestIntegerInArray(int[] arr) {
 		// using sort
 		Arrays.sort(arr);
 		return arr[1];
 
 	}
 
-	private static int secondLargetIntegerInArrayUsingSet(int[] arr) {
+	private static int secondSmallestIntegerInArrayUsingSet(int[] arr) {
 
 		Set<Integer> st = new TreeSet<>();
 		for (int n : arr) {

@@ -1,5 +1,6 @@
 package easy;
 
+// String Pool in java is a pool of Strings stored in Java Heap Memory
 import java.util.Arrays;
 
 public class Anagram {

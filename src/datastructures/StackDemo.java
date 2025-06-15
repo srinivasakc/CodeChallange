@@ -16,14 +16,16 @@ public class StackDemo {
 
 	static boolean isBalanced(String s) {
 		char[] charArray = s.toCharArray();
-		Stack<Character> stack = new Stack();
+		Stack<Character> stack = new Stack<>();
 		for (char c : charArray) {
 			if (c == '{' || c == '[' || c == '(') {
 				stack.push(c);
+
 			} else if (c == '}') {
 				if (!(stack.pop() == '{')) {
 					return false;
 				}
+
 			} else if (c == ']') {
 				if (!(stack.pop() == '[')) {
 					return false;

@@ -16,6 +16,7 @@ public class RemoveDuplicatesFromArrayAndSort_Set_TreeSet {
 		System.out.println(set);
 		// sort the elements in the set
 		TreeSet<Integer> sortedset = new TreeSet<Integer>(set);
+
 		System.out.println(sortedset);
 
 		// fill all the elements in the a[] with zero

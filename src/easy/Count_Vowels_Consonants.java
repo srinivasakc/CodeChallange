@@ -17,25 +17,13 @@ public class Count_Vowels_Consonants {
 		int consonantsCount = 0;
 		String vowels = "aeiouAEIOU";
 
-//		for (char c : str.toCharArray()) {
-//			if (vowels.indexOf(c) != -1) {
-//				vowelsCount++;
-//				System.out.println("Vowel- " + c);
-//			} else if (Character.isLetter(c)) {
-//				System.out.println("Consonants- " + c);
-//				consonantsCount++;
-//			}
-//
-//		}
-		
 		for (char c : str.toCharArray()) {
-			if (vowels.indexOf(c) == -1) {
-				System.out.println("Consonants- " + c);
-				consonantsCount++;
-				
-			} else if (Character.isLetter(c)) {
+			if (vowels.indexOf(c) != -1) {
 				vowelsCount++;
 				System.out.println("Vowel- " + c);
+			} else if (Character.isLetter(c)) {
+				System.out.println("Consonants- " + c);
+				consonantsCount++;
 			}
 
 		}

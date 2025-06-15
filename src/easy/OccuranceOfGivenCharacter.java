@@ -10,13 +10,19 @@ public class OccuranceOfGivenCharacter {
 
 	}
 
-	private static int getOccurrenceOfgivenCharacter(String str, char c) {
+	private static int getOccurrenceOfgivenCharacter(String str, char key) {
 		int cnt = 0;
 
-		for (int i = 0; i < str.length(); i++) {
-			if (str.charAt(i) == c) {
+//		for (int i = 0; i < str.length(); i++) {
+//			if (str.charAt(i) == key) {
+//				cnt++;
+//			}
+//		}
+		for (char ch : str.toCharArray()) {
+			if (key == ch) {
 				cnt++;
 			}
+
 		}
 
 		return cnt;
