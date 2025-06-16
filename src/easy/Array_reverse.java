@@ -5,8 +5,11 @@ import java.util.Collections;
 
 public class Array_reverse {
 	public static void main(String[] args) {
-		int[] inputArray = new int[] { 1, 4, 3, 2, 6, 5 };
-		System.out.println(Arrays.toString(rev(inputArray)));
+		int[] inputArray = new int[] { 1, 2, 3, 4, 5 };
+		System.out.println(Arrays.toString(reverseArray(inputArray)));
+		int[] inputArray1 = new int[] { 1, 2, 3, 4, 5 };
+		System.out.println(Arrays.toString(rev(inputArray1)));
+
 	}
 
 	public static int[] reverseArray(int[] inputArray) {
@@ -29,7 +32,7 @@ public class Array_reverse {
 
 		Collections.reverse(Arrays.asList(inputArray));
 
-		System.out.println("Modified Array : " + Arrays.toString(inputArray));
+//		System.out.println("Modified Array : " + Arrays.toString(inputArray));
 		return inputArray;
 
 	}
