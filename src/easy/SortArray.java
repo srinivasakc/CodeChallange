@@ -2,7 +2,7 @@ package easy;
 
 import java.util.Arrays;
 
-public class sortArray_WithOutbuiltInMetthod {
+public class SortArray {
 
 	public static void main(String[] args) {
 		int[] arr = { 64, 34, 25, 12 };
