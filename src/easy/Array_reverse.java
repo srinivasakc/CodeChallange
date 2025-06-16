@@ -7,6 +7,9 @@ public class Array_reverse {
 	public static void main(String[] args) {
 		int[] inputArray = new int[] { 1, 2, 3, 4, 5 };
 		System.out.println(Arrays.toString(reverseArray(inputArray)));
+
+		inputArray = new int[] { 10, 3, 2, 6, 23, 1, 2, 3, 4, 5 };
+		System.out.println(Arrays.toString(reverseArray(inputArray)));
 		int[] inputArray1 = new int[] { 1, 2, 3, 4, 5 };
 		System.out.println(Arrays.toString(rev(inputArray1)));
 

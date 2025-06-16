@@ -14,8 +14,8 @@ public class Unique_TripletThatSumTo_A_GivenValue {
 		Arrays.sort(nums);
 
 		List<List<Integer>> pair = new ArrayList<>();
-		TreeSet<String> set = new TreeSet<String>();
 		List<Integer> triplets = new ArrayList<>();
+		TreeSet<String> set = new TreeSet<String>();
 
 		/*
 		 * Iterate over the array from the start and consider it as the first element
