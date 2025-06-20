@@ -3,7 +3,8 @@ package easy;
 public class PermutationOfString {
 
 	public static void main(String[] args) {
-		String str = "abc";
+		int num = 123;
+		String str = Integer.toString(num);
 		printPermutation(str, "");
 
 	}
@@ -11,7 +12,7 @@ public class PermutationOfString {
 	private static void printPermutation(String str, String result) {
 		// If string is empty
 		if (str.length() == 0) {
-			System.out.println(result);// print the results
+			System.out.print(result + " ");// print the results
 			return;
 		}
 

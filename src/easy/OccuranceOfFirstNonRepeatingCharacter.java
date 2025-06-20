@@ -23,12 +23,11 @@ public class OccuranceOfFirstNonRepeatingCharacter {
 				map.put(c, map.get(c) + 1);
 			}
 
-			for (Map.Entry<Character, Integer> entry : map.entrySet()) {
-				if (entry.getValue() == 1) {
-					return entry.getKey();
-				}
+		}
+		for (Map.Entry<Character, Integer> entry : map.entrySet()) {
+			if (entry.getValue() == 1) {
+				return entry.getKey();
 			}
-
 		}
 		return '\0';
 

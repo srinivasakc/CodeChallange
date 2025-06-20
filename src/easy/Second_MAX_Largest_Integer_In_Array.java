@@ -6,7 +6,7 @@ import java.util.TreeSet;
 public class Second_MAX_Largest_Integer_In_Array {
 
 	public static void main(String[] args) {
-		int[] arr = new int[] { 2, 3, 5, 7, 23, 67, 54, 33 };
+		int[] arr = new int[] { 2, 3, 5, 7, 23, 67, 54, 33, 3 };
 
 		System.out.println(secondLargetIntegerInArray(arr));
 		System.out.println(secondLargetIntegerInArrayUsingSet(arr));
@@ -36,6 +36,7 @@ public class Second_MAX_Largest_Integer_In_Array {
 			arrayB[i] = num;
 			i++;
 		}
+		System.out.println(Arrays.toString(arrayB));
 		// convertinf to list
 //		List<Integer> list = new ArrayList<>(ts);
 //		System.out.println(list.get(list.size() - 2));
